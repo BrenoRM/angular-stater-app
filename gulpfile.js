@@ -46,8 +46,7 @@ gulp.task('scripts', function() {
 
     gulp.src(js_files)
 	    .pipe(concat("app.min.js"))
-	    .pipe(stripDebug()) 
-	    .pipe(uglify())
+	    .pipe(stripDebug())
 	    .pipe(gulp.dest("./dist/"));
 
 });
@@ -70,7 +69,6 @@ gulp.task('angular', function() {
     gulp.src(ng_files)
       .pipe(concat("lib.min.js"))
       .pipe(stripDebug()) 
-      .pipe(uglify())
       .pipe(gulp.dest("./dist/"));
 });
 

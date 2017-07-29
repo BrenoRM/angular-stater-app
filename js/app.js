@@ -1,6 +1,7 @@
 var jiffApp = angular.module('jiffApp', [
 	"ngRoute",
-	"dashboard"
+  "dashboard",
+  "home"
 ]); 
 
 jiffApp.config(['$locationProvider' ,'$routeProvider',
@@ -10,6 +11,9 @@ jiffApp.config(['$locationProvider' ,'$routeProvider',
       $routeProvider.
         when('/dashboard', {
           template: '<dashboard></dashboard>'
+        }).
+        when('/home', {
+          template: '<home></home>'
         }).
         otherwise('/dashboard');
     }
